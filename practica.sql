@@ -54,7 +54,7 @@ select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBER
 select count(*) from Usuarios where not activo or saldo <= '0';
 
 -- 5. Listar el login de los usuarios con nivel 1, 2 o 3
-select usuarios as login from Usuarios where nivel >= 1 and nivel <= 3;
+select usuarios as login from Usuarios where in (1, 2, 3);
 
 -- 6. Listar los números de teléfono con saldo menor o igual a 300
 select telefono from Usuarios where saldo <= 300;
