@@ -19,8 +19,8 @@ create table Usuarios(
 
 insert into Usuarios
 values
-('1','BRE2271','BRENDA','M','2','brenda@live.com','655-330-5736','SAMSUNG','IUSACELL','100','1'),
-('2','OSC4677','OSCAR','H','3','oscar@gmail.com','655-143-4181','LG','TELCEL','0','1'),
+('1','BRE2271','BRENDA', 'M','2','brenda@live.com','655-330-5736','SAMSUNG','IUSACELL','100','1'),
+('2','OSC4677','OSCAR', 'H','3','oscar@gmail.com','655-143-4181','LG','TELCEL','0','1'),
 ('3','JOS7086','JOSE','H','3','francisco@gmail.com','655-143-3922','NOKIA','MOVISTAR','150','1'),
 ('4','LUI6115','LUIS','H','0','enrique@outlook.com','655-137-1279','SAMSUNG','TELCEL','50','1'),
 ('5','LUI7072','LUIS','H','1','luis@hotmail.com','655-100-8260','NOKIA','IUSACELL','50','0'),
