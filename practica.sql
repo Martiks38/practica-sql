@@ -96,8 +96,14 @@ select usuarios, telefono from Usuarios where compania in ('IUSACELL', 'AXEL');
 select email from Usuarios where email not like '%yahoo%';
 
 -- 19. Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL o IUSACELL
+select usuarios, telefono from Usuarios where compania not in ('TELCEL', 'IUSACELL');
+
 -- 20. Listar el login y teléfono de los usuarios con compañía telefónica UNEFON
+select usuarios, telefono from Usuarios where compania = 'UNEFON';
+
 -- 21. Listar las diferentes marcas de celular en orden alfabético descendentemente
+select marca from Usuarios group by marca order by marca desc;
+
 -- 22. Listar las diferentes compañías en orden alfabético aleatorio
 -- 23. Listar el login de los usuarios con nivel 0 o 2
 -- 24. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
