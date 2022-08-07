@@ -46,3 +46,6 @@ select nombre from Usuarios;
 
 -- 2. Calcular el saldo máximo de los usuarios de sexo “Mujer”
 select max(u.saldo) Max_Saldo_Mujer from Usuarios u where u.sexo = 'M';
+
+-- 3. Listar nombre y teléfono de los usuarios con teléfono NOKIA, BLACKBERRY o SONY
+select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBERRY" or marca = "SONY";
