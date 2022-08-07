@@ -141,8 +141,14 @@ select distinct compania from Usuarios order by compania desc;
 select usuarios from Usuarios where not activo;
 
 -- 34. Listar los números de teléfono sin saldo
+select telefono from Usuarios where saldo <= 0;
+
 -- 35. Calcular el saldo mínimo de los usuarios de sexo “Hombre”
+select min(saldo) as Min_Saldo from Usuarios where sexo = 'H';
+
 -- 36. Listar los números de teléfono con saldo mayor a 300
+select telefono from Usuarios where saldo > 300;
+
 -- 37. Contar el número de usuarios por marca de teléfono
 -- 38. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG
 -- 39. Listar las diferentes compañías en orden alfabético ascendentemente
