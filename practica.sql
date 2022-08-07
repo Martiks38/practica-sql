@@ -150,8 +150,14 @@ select min(saldo) as Min_Saldo from Usuarios where sexo = 'H';
 select telefono from Usuarios where saldo > 300;
 
 -- 37. Contar el número de usuarios por marca de teléfono
+select marca, count(*) from Usuarios group by marca;
+
 -- 38. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG
+select nombre, telefono from Usuarios where marca != 'LG';
+
 -- 39. Listar las diferentes compañías en orden alfabético ascendentemente
+select distinct compania from Usuarios order by compania asc;
+
 -- 40. Calcular la suma de los saldos de los usuarios de la compañía telefónica UNEFON
 -- 41. Mostrar el email de los usuarios que usan hotmail
 -- 42. Listar los nombres de los usuarios sin saldo o inactivos
