@@ -75,6 +75,8 @@ select usuarios from Usuarios where nivel = 2;
 select email from Usuarios where email like '%gmail%';
 
 -- 12. Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA
+select nombre, telefono from Usuarios where marca in ('LG', 'SAMSUNG', 'MOTOROLA');
+
 -- 13. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG o SAMSUNG
 -- 14. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL
 -- 15. Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL
