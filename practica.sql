@@ -102,9 +102,11 @@ select usuarios, telefono from Usuarios where compania not in ('TELCEL', 'IUSACE
 select usuarios, telefono from Usuarios where compania = 'UNEFON';
 
 -- 21. Listar las diferentes marcas de celular en orden alfabético descendentemente
-select marca from Usuarios group by marca order by marca desc;
+select distinct marca from Usuarios order by marca desc;
 
 -- 22. Listar las diferentes compañías en orden alfabético aleatorio
+
+
 -- 23. Listar el login de los usuarios con nivel 0 o 2
 -- 24. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
 -- 25. Listar el login de los usuarios con nivel 1 o 3
