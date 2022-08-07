@@ -159,8 +159,14 @@ select nombre, telefono from Usuarios where marca != 'LG';
 select distinct compania from Usuarios order by compania asc;
 
 -- 40. Calcular la suma de los saldos de los usuarios de la compañía telefónica UNEFON
+select sum(saldo) from Usuarios where compania = 'UNEFON';
+
 -- 41. Mostrar el email de los usuarios que usan hotmail
+select email from Usuarios where email like '%hotmail%';
+
 -- 42. Listar los nombres de los usuarios sin saldo o inactivos
+select nombre from Usuarios where saldo <= 0 or not activo;
+
 -- 43. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL
 -- 44. Listar las diferentes marcas de celular en orden alfabético ascendentemente
 -- 45. Listar las diferentes marcas de celular en orden alfabético aleatorio
