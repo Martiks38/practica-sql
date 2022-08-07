@@ -87,6 +87,8 @@ select usuarios, telefono from Usuarios where compania = 'IUSACELL';
 select usuarios, telefono from Usuarios where not compania = 'TELCEL';
 
 -- 16. Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
+select avg(saldo) as Saldo_Promedio from Usuarios where marca = 'NOKIA';
+
 -- 17. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o AXEL
 -- 18. Mostrar el email de los usuarios que no usan yahoo
 -- 19. Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL o IUSACELL
