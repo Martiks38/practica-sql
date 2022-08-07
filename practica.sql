@@ -177,5 +177,10 @@ select distinct marca from Usuarios order by marca asc;
 select distinct marca from Usuarios order by rand();
 
 -- 46. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o UNEFON
+select usuarios, telefono from Usuarios where compania in ('IUSACELL', 'UNEFON');
+
 -- 47. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca MOTOROLA o NOKIA
+select nombre, telefono from Usuarios where marca not in ('MOTOROLA', 'NOKIA');
+
 -- 48. Calcular la suma de los saldos de los usuarios de la compañía telefónica TELCEL
+select sum(saldo) from Usuarios where compania = 'TELCEL';
