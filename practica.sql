@@ -123,8 +123,14 @@ select nombre, telefono from Usuarios where marca != 'BLACKBERRY';
 select usuarios from Usuarios where nivel = 3;
 
 -- 28. Listar el login de los usuarios con nivel 0
+select usuarios from Usuarios where nivel = 0;
+
 -- 29. Listar el login de los usuarios con nivel 1
+select usuarios from Usuarios where nivel = 1;
+
 -- 30. Contar el número de usuarios por sexo
+select sexo, count(*) from Usuarios group by sexo;
+
 -- 31. Listar el login y teléfono de los usuarios con compañía telefónica AT&T
 -- 32. Listar las diferentes compañías en orden alfabético descendentemente
 -- 33. Listar el login de los usuarios inactivos
