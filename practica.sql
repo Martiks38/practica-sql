@@ -114,8 +114,14 @@ select usuarios from Usuarios where nivel in (0, 2);
 select avg(saldo) as AVG_Saldo from Usuarios where marca = 'LG';
 
 -- 25. Listar el login de los usuarios con nivel 1 o 3
+select usuarios from Usuarios where nivel in (1, 3);
+
 -- 26. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca BLACKBERRY
+select nombre, telefono from Usuarios where marca != 'BLACKBERRY';
+
 -- 27. Listar el login de los usuarios con nivel 3
+select usuarios from Usuarios where nivel = 3;
+
 -- 28. Listar el login de los usuarios con nivel 0
 -- 29. Listar el login de los usuarios con nivel 1
 -- 30. Contar el número de usuarios por sexo
