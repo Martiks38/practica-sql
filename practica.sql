@@ -66,6 +66,8 @@ select sum(u.saldo) as saldo_Total_User_Nextel from Usuarios u where u.compania 
 select compania, count(*) from Usuarios group by compania;
 
 -- 9.Contar el número de usuarios por nivel
+select nivel, count(*) as Usuarios_Por_Nivel from Usuarios group by nivel;
+
 -- 10.Listar el login de los usuarios con nivel 2
 -- 11.Mostrar el email de los usuarios que usan gmail
 -- 12.Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA
