@@ -105,10 +105,14 @@ select usuarios, telefono from Usuarios where compania = 'UNEFON';
 select distinct marca from Usuarios order by marca desc;
 
 -- 22. Listar las diferentes compañías en orden alfabético aleatorio
-
+select distinct compania from Usuarios order by rand();
 
 -- 23. Listar el login de los usuarios con nivel 0 o 2
+select usuarios from Usuarios where nivel in (0, 2);
+
 -- 24. Calcular el saldo promedio de los usuarios que tienen teléfono marca LG
+select avg(saldo) as AVG_Saldo from Usuarios where marca = 'LG';
+
 -- 25. Listar el login de los usuarios con nivel 1 o 3
 -- 26. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca BLACKBERRY
 -- 27. Listar el login de los usuarios con nivel 3
