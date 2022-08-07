@@ -72,6 +72,8 @@ select nivel, count(*) as Usuarios_Por_Nivel from Usuarios group by nivel;
 select usuarios from Usuarios where nivel = 2;
 
 -- 11. Mostrar el email de los usuarios que usan gmail
+select email from Usuarios where email like '%gmail%';
+
 -- 12. Listar nombre y teléfono de los usuarios con teléfono LG, SAMSUNG o MOTOROLA
 -- 13. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG o SAMSUNG
 -- 14. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL
