@@ -168,8 +168,14 @@ select email from Usuarios where email like '%hotmail%';
 select nombre from Usuarios where saldo <= 0 or not activo;
 
 -- 43. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL
+select usuarios, telefono from Usuarios where compania in ('IUSACELL', 'TELCEL');
+
 -- 44. Listar las diferentes marcas de celular en orden alfabético ascendentemente
+select distinct marca from Usuarios order by marca asc;
+
 -- 45. Listar las diferentes marcas de celular en orden alfabético aleatorio
+select distinct marca from Usuarios order by rand();
+
 -- 46. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o UNEFON
 -- 47. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca MOTOROLA o NOKIA
 -- 48. Calcular la suma de los saldos de los usuarios de la compañía telefónica TELCEL
