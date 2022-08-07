@@ -48,22 +48,22 @@ select nombre from Usuarios;
 select max(u.saldo) Max_Saldo_Mujer from Usuarios u where u.sexo = 'M';
 
 -- 3. Listar nombre y teléfono de los usuarios con teléfono NOKIA, BLACKBERRY o SONY
-select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBERRY" or marca = "SONY";
+select nombre, telefono from Usuarios where marca in ('NOKIA', 'BLACKBERRY', 'SONY');
 
 -- 4. Contar los usuarios sin saldo o inactivos
 select count(*) from Usuarios where not activo or saldo <= '0';
 
 -- 5. Listar el login de los usuarios con nivel 1, 2 o 3
-select usuarios as login from Usuarios where in (1, 2, 3);
+select usuarios as login from Usuarios where nivel in (1, 2, 3);
 
 -- 6. Listar los números de teléfono con saldo menor o igual a 300
 select telefono from Usuarios where saldo <= 300;
 
 -- 7. Calcular la suma de los saldos de los usuarios de la compañía telefónica NEXTEL
-select sum(u.saldo) as saldo_Total_User_Nextel from Usuarios u where u.marca = 'NEXTEL';
+select sum(u.saldo) as saldo_Total_User_Nextel from Usuarios u where u.compania = 'NEXTEL';
 
 -- 8.Contar el número de usuarios por compañía telefónica
-
+select compania, count(*) from Usuarios group by compania;
 
 -- 9.Contar el número de usuarios por nivel
 -- 10.Listar el login de los usuarios con nivel 2
