@@ -78,6 +78,8 @@ select email from Usuarios where email like '%gmail%';
 select nombre, telefono from Usuarios where marca in ('LG', 'SAMSUNG', 'MOTOROLA');
 
 -- 13. Listar nombre y teléfono de los usuarios con teléfono que no sea de la marca LG o SAMSUNG
+select nombre, telefono from Usuarios where marca not in ('LG', 'SAMSUNG');
+
 -- 14. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL
 -- 15. Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL
 -- 16. Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
