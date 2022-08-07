@@ -81,6 +81,8 @@ select nombre, telefono from Usuarios where marca in ('LG', 'SAMSUNG', 'MOTOROLA
 select nombre, telefono from Usuarios where marca not in ('LG', 'SAMSUNG');
 
 -- 14. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL
+select usuarios, telefono from Usuarios where compania = 'IUSACELL';
+
 -- 15. Listar el login y teléfono de los usuarios con compañía telefónica que no sea TELCEL
 -- 16. Calcular el saldo promedio de los usuarios que tienen teléfono marca NOKIA
 -- 17. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o AXEL
