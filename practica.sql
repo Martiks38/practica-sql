@@ -49,3 +49,6 @@ select max(u.saldo) Max_Saldo_Mujer from Usuarios u where u.sexo = 'M';
 
 -- 3. Listar nombre y teléfono de los usuarios con teléfono NOKIA, BLACKBERRY o SONY
 select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBERRY" or marca = "SONY";
+
+-- 4. Contar los usuarios sin saldo o inactivos
+select count(Usuarios) from Usuarios where activo = '0' or saldo = '0';
