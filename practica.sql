@@ -55,3 +55,6 @@ select count(Usuarios) from Usuarios where activo = '0' or saldo = '0';
 
 -- 5. Listar el login de los usuarios con nivel 1, 2 o 3
 select usuarios as login from Usuarios where nivel >= 1 and nivel <= 3;
+
+-- 6. Listar los números de teléfono con saldo menor o igual a 300
+select telefono from Usuarios where saldo <= 300;
