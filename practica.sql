@@ -43,3 +43,6 @@ values
 
 -- 1. Listar los nombres de los usuarios
 select nombre from Usuarios;
+
+-- 2. Calcular el saldo máximo de los usuarios de sexo “Mujer”
+select max(u.saldo) Max_Saldo_Mujer from Usuarios u where u.sexo = 'M';
