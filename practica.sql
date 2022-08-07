@@ -52,3 +52,6 @@ select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBER
 
 -- 4. Contar los usuarios sin saldo o inactivos
 select count(Usuarios) from Usuarios where activo = '0' or saldo = '0';
+
+-- 5. Listar el login de los usuarios con nivel 1, 2 o 3
+select usuarios as login from Usuarios where nivel >= 1 and nivel <= 3;
