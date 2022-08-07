@@ -1,5 +1,7 @@
 create database practicaSQL;
 
+use practicaSQL;
+
 create table Usuarios(
 	id int not null auto_increment,
     usuarios varchar(20),
@@ -11,10 +13,11 @@ create table Usuarios(
     marca varchar(20),
     compania varchar(20),
     saldo float,
-    activo boolean
+    activo boolean,
+    primary key(id)
 );
 
-insert into Usarios
+insert into Usuarios
 values
 ('1','BRE2271','BRENDA','M','2','brenda@live.com','655-330-5736','SAMSUNG','IUSACELL','100','1'),
 ('2','OSC4677','OSCAR','H','3','oscar@gmail.com','655-143-4181','LG','TELCEL','0','1'),
@@ -37,3 +40,6 @@ values
 ('19','LET4015','LETICIA','M','2','leticia@yahoo.com','655-143-4019','BLACKBERRY','UNEFON','100','1'),
 ('20','LUI1076','LUIS','H','3','luis2@live.com','655-100-5085','SONY','UNEFON','150','1'),
 ('21','HUG5441','HUGO','H','2','hugo@live.com','655-137-3935','MOTOROLA','AT&T','500','1');
+
+-- 1. Listar los nombres de los usuarios
+select nombre from Usuarios;
