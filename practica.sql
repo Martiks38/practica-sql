@@ -51,7 +51,7 @@ select max(u.saldo) Max_Saldo_Mujer from Usuarios u where u.sexo = 'M';
 select nombre, telefono from Usuarios where marca = 'NOKIA' or marca = "BLACKBERRY" or marca = "SONY";
 
 -- 4. Contar los usuarios sin saldo o inactivos
-select count(Usuarios) from Usuarios where activo = '0' or saldo = '0';
+select count(*) from Usuarios where not activo or saldo <= '0';
 
 -- 5. Listar el login de los usuarios con nivel 1, 2 o 3
 select usuarios as login from Usuarios where nivel >= 1 and nivel <= 3;
@@ -63,6 +63,8 @@ select telefono from Usuarios where saldo <= 300;
 select sum(u.saldo) as saldo_Total_User_Nextel from Usuarios u where u.marca = 'NEXTEL';
 
 -- 8.Contar el número de usuarios por compañía telefónica
+
+
 -- 9.Contar el número de usuarios por nivel
 -- 10.Listar el login de los usuarios con nivel 2
 -- 11.Mostrar el email de los usuarios que usan gmail
