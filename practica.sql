@@ -60,7 +60,7 @@ select usuarios as login from Usuarios where nivel >= 1 and nivel <= 3;
 select telefono from Usuarios where saldo <= 300;
 
 -- 7. Calcular la suma de los saldos de los usuarios de la compañía telefónica NEXTEL
-
+select sum(u.saldo) as saldo_Total_User_Nextel from Usuarios u where u.marca = 'NEXTEL';
 
 -- 8.Contar el número de usuarios por compañía telefónica
 -- 9.Contar el número de usuarios por nivel
