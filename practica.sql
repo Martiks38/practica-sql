@@ -132,8 +132,14 @@ select usuarios from Usuarios where nivel = 1;
 select sexo, count(*) from Usuarios group by sexo;
 
 -- 31. Listar el login y teléfono de los usuarios con compañía telefónica AT&T
+select usuarios, telefono from Usuarios where compania = 'AT&T';
+
 -- 32. Listar las diferentes compañías en orden alfabético descendentemente
+select distinct compania from Usuarios order by compania desc;
+
 -- 33. Listar el login de los usuarios inactivos
+select usuarios from Usuarios where not activo;
+
 -- 34. Listar los números de teléfono sin saldo
 -- 35. Calcular el saldo mínimo de los usuarios de sexo “Hombre”
 -- 36. Listar los números de teléfono con saldo mayor a 300
