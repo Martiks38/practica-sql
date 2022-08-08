@@ -58,14 +58,14 @@ create table clientes (
   values ('Lopez Lucas', 'San Martin 1010', 'Posadas', 4,'0457858745');
 
 -- 1.
-select distinct p.codigo, p.nombre, c.codigoProvincia
+select distinct p.codigo, p.nombre
 from provincias p left join clientes c
 on p.codigo = c.codigoProvincia where c.codigoProvincia is null;
 
 -- 2.
-select distinct p.codigo, p.nombre, c.codigoProvincia
+select distinct p.codigo, p.nombre
 from provincias p left join clientes c
 on p.codigo = c.codigoProvincia where c.codigoProvincia is not null;
 
 -- Otra forma
-select distinct p.codigo, p.nombre, c.codigoProvincia from provincias p inner join clientes c on p.codigo = c.codigoProvincia;
+select distinct p.codigo, p.nombre from provincias p inner join clientes c on p.codigo = c.codigoProvincia;
