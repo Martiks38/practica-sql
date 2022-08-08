@@ -57,9 +57,15 @@ create table clientes (
  insert into clientes (nombre,domicilio,ciudad,codigoProvincia,telefono)
   values ('Lopez Lucas', 'San Martin 1010', 'Posadas', 4,'0457858745');
 
-SELECT p.codigo,p.nombre FROM provincias AS p
-  LEFT JOIN clientes AS c
-  ON c.codigoProvincia=p.codigo
-  WHERE c.codigoprovincia IS null;
-  
-select distinct p.codigo, p.nombre, c.codigoProvincia from provincias p left join clientes c on p.codigo = c.codigoProvincia where c.codigoProvincia is null;
+-- 1.
+select distinct p.codigo, p.nombre, c.codigoProvincia
+from provincias p left join clientes c
+on p.codigo = c.codigoProvincia where c.codigoProvincia is null;
+
+-- 2.
+select distinct p.codigo, p.nombre, c.codigoProvincia
+from provincias p left join clientes c
+on p.codigo = c.codigoProvincia where c.codigoProvincia is not null;
+
+-- Otra forma
+select distinct p.codigo, p.nombre, c.codigoProvincia from provincias p inner join clientes c on p.codigo = c.codigoProvincia;
